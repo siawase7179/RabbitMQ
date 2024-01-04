@@ -1,0 +1,16 @@
+server:
+  port: 7001
+spring:
+  mvc:
+    log-request-details: true
+  rabbitmq:
+    addresses: rabbitM:5672,rabbitS:5672
+    username: newgw
+    password: pwnewgw
+    virtual-host: mq_test
+    connection-timeout: 3000
+    queue-name: TEST
+
+logging:
+  level:
+    root: INFO

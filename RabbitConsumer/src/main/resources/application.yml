@@ -1,0 +1,11 @@
+logging:
+  level:
+    root: INFO
+
+spring:
+  rabbitmq:
+    addresses: rabbitM:5672,rabbitS:5672
+    username: newgw
+    password: pwnewgw
+    virtual-host: mq_test
+    queue-name: TEST-1
