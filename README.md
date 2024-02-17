@@ -1,3 +1,36 @@
+# RabbitMQ
+
+## erlang cookie
+
+- Cluster간 인증하기 위한 쿠키
+
+## Ram모드
+
+- 큐에 대한 메타정보를 메모리에 저장
+- Disk모드에 비해 속도는 빠르나 해당 노드에 문제 발생시 유실 가능
+
+## Exchange 종류
+
+**Fanout**
+
+- exchange와 binding된 모든 큐에 publish
+
+**Direct**
+
+- 디폴트 exchange
+- 생성되는 queue가 자동으로 binding되고, 각 queue의 이름이 routing key로 지정
+
+**Topic**
+
+- direct는 routing key가 일치해야 가능하지만 Topic은 routing key 패턴이 일치하는 queue에 publish
+
+**Header**
+
+- key-value로 정의된 헤더에 의해 메세지를 queue에 전달
+- 메세지를 전달하는 producer쪽에서 정의하는 header의 key-value와 메세지를 받는 consumer쪽에서 정의된 argument의 key-value가 일치하면 binding
+
+-------
+
 # RabbitMQ 성능 테스트
 publish, consumer 모두 spring framework를 사용
 
